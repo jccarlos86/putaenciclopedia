@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enciclopedia de groserias</title>
+    <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/animateCSS/animate.css">
+    <link rel="stylesheet" href="resources/fontAwesome/all.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="baloo">
+    <div class="continer-fluid">
+        <!-- encabezado -->
+        <div class="row">
+            <div class="col-sm-12">
+
+            </div>
+        </div>
+        <!-- opciones y busquedas -->
+        <div class="row pb-5">
+            <div class="col-sm-12">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="lnkAgregar" href="#">Agregar</a>
+                        </li>
+                      </ul>
+                      <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" id="buscador" type="search" placeholder="Buscar" aria-label="Search">
+                      </form>
+                    </div>
+                  </nav>
+                  <!-- alertas -->
+                  <div class="alert" role="alert" id="alerta"></div>
+            </div>
+        </div>
+        <!-- tabla -->
+        <div class="row pt-5 pb-5">
+            <div class="col-sm-12">
+                <table class="table-striped w-75 mx-auto" id="tblContenido">
+                    <thead>
+                      <tr>
+                        <th>Texto</th>
+                        <th>Tipo</th>
+                        <th style="max-width:200px;">Descripci&oacute;n</th>
+                        <th>Pa&iacute;s</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot></tfoot>
+                </table>
+            </div>
+        </div>
+         <!-- modal -->
+        <div class="modal fade" id="modalNuevoTexto" tabindex="-1" role="dialog" aria-labelledby="modalNuevoTextoTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                  <h5 class="modal-title" id="modalNuevoTextoTitle">Contribuir</h5>
+                  <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+                  </div>
+                  <div class="modal-body">
+                      <form>
+                          <label for="tituloTexto">Escribe la palabra</label>
+                          <div class="input-group mb-3">
+                              <input type="text" class="form-control" id="texto" aria-describedby="basic-addon3" placeholder="Escribe un texto">
+                          </div>
+                          <label for="tituloTexto">Selecciona el tipo a que pertenece</label>
+                          <div class="input-group dropdown mb-3">
+                            <select class="form-control" name="" id="tipo">
+                              <option value="">Selecciona</option>
+                              <option value="contextual">Contextual</option>
+                              <option value="literal">Literal</option>
+                            </select>
+                          </div>
+                          <label for="tituloTexto">Agrega una descripci&oacute;n para esta palabra </label>
+                          <div class="input-group mb-3">
+                            <textarea class="form-control" id="descripcion" rows="3"></textarea>
+                          </div>
+                          <label for="tituloTexto">Selecciona el pa&iacute;s al que pertenece</label>
+                          <div class="input-group mb-3">
+                            <select class="form-control" name="" id="pais">
+                              <option value="">Selecciona</option>
+                            </select>
+                          </div>
+                      </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" data-target="modalNuevoTexto" id="btnCerrar">Cerrar</button>
+                    <button type="button" class="btn btn-success" id="btnCrearTexto">Crear</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+         <!-- pie de pagina -->
+        <div class="row wood">
+          <div class="col-sm-12 pb-5">
+            <!-- redes sociales -->
+            <div class="row pt-5">
+              <div class="col-sm-12">
+                <ul class="nav justify-content-center">
+                  <li class="nav-item">
+                    <a class="nav-link text-white" 
+                    href="https://api.whatsapp.com/send?phone=528118952279" 
+                    target="_blank">
+                      <i class="fab fa-whatsapp h2"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="https://www.facebook.com/C2-Technologies-107211194272281" 
+                    target="_blank">
+                      <i class="fab fa-facebook h2"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- telefonos -->
+            <div class="row">
+              <div class="col-sm-12">
+                <ul class="nav justify-content-center">
+                  <!-- <li class="nav-item">
+                      <a href="" class="nav-link text-white">
+                        <i class="fas fa-phone"></i>
+                        8118511071
+                      </a>
+                  </li> -->
+                  <li class="nav-item">
+                    <a href="" class="nav-link text-white">
+                      <i class="fas fa-phone"></i>
+                      8118952279
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link text-white">
+                    <i class="fas fa-phone"></i>
+                    8124296889
+                  </a>
+              </li>
+                </ul>
+              </div>
+            </div>
+            <!-- copyright -->
+            <div class="row">
+              <div class="col-sm-12">
+                <ul class="nav justify-content-center">
+                  <li class="nav-item">
+                      <a href="" class="nav-link text-white">
+                          <i class="far fa-copyright"></i>
+                          C2 - Technologies
+                      </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+   
+    <script src="resources/jquery/jquery-3.2.1.min.js"></script>
+    <script src="resources/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/paises_ciudades.js"></script>
+    <script src="js/enciclopedia.js"></script>
+</body>
+</html>
