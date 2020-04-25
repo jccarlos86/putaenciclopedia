@@ -4,7 +4,7 @@ include 'conexion.php';
 $result;
 $jsonArray = array();
 
-$query = "SELECT groseria, tipo, descripcion, pais FROM Enciclopedia";
+$query = "SELECT groseria, tipo, descripcion, pais FROM Enciclopedia ORDER BY groseria";
 $sel = $con ->query($query);
 if($sel){
     while($row = mysqli_fetch_array($sel)){
