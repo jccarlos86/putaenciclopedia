@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    $("#lnkBorrarFiltro").parent().hide();
+
     jQuery.expr[':'].Contains = function(a, i, m) {
         return jQuery(a).text().toUpperCase()
             .indexOf(m[3].toUpperCase()) >= 0;
@@ -83,7 +85,7 @@ function obtenerRegistros(){
 function crearTabla(data){
     var rows = "";
     for(var d = 0; d < data.length; d++){
-        rows += "<tr><td class='text-center text-uppercase'>"+unescape(data[d].Texto)+"</td>";
+        rows += "<tr><td class='text-center text-uppercase groseria'>"+unescape(data[d].Texto)+"</td>";
         rows += "<td class='text-center text-uppercase'>"+unescape(data[d].Tipo)+"</td>";
         rows += "<td class='text-justify' style='max-width:200px;'>"+unescape(data[d].Descripcion)+"</td>";
         rows += "<td class='text-center'>"+unescape(data[d].Pais)+"</td></tr>";
@@ -110,6 +112,16 @@ function buscarTexto(texto){
     }
 }
 
+function filtrarPorLetra(letra){
+    $("#tblContenido tbody tr").hide();
+    $(".groseria:Contains('" + letra + "')").each(function(e){
+        if($(this).html().toLowerCase().startsWith(letra) || 
+            $(this).html().toUpperCase().startsWith(letra)){
+            $(this).closest('tr').show(); console.log($(this).html());
+        }
+    });
+} 
+
 //-----------------> TRIGGERS
 $("#btnCrearTexto").click(function(){
     validar();
@@ -122,4 +134,14 @@ $("#lnkAgregar").click(function(evt){
 
 $("#buscador").keyup(function(){
     buscarTexto($(this).val());
+});
+
+$(".abc-dario").click(function(){
+    $("#lnkBorrarFiltro").parent().show();
+    filtrarPorLetra($(this).html());
+});
+
+$("#lnkBorrarFiltro").click(function(){
+    buscarTexto("");
+    $("#lnkBorrarFiltro").parent().hide();
 });

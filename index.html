@@ -10,13 +10,7 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body class="baloo">
-    <div class="continer-fluid">
-        <!-- encabezado -->
-        <div class="row">
-            <div class="col-sm-12">
-
-            </div>
-        </div>
+    <div class="container-fluid">
         <!-- opciones y busquedas -->
         <div class="row pb-5">
             <div class="col-sm-12">
@@ -29,6 +23,9 @@
                         <li class="nav-item active">
                           <button type="button" id="lnkAgregar" class="btn btn-primary">Contibuir</button>
                         </li>
+                        <li class="nav-item">
+                          <button type="button" id="lnkBorrarFiltro" class="btn btn-warning">Borrar Filtro</button>
+                        </li>
                       </ul>
                       <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" id="buscador" type="search" placeholder="Buscar" aria-label="Search">
@@ -38,6 +35,43 @@
                   <!-- alertas -->
                   <div class="alert" role="alert" id="alerta"></div>
             </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <p class="text-center h1 pt-3 pb-3">
+              Para insultar apropiadamente.
+            </p>
+            <nav class="nav justify-content-center">
+              <a class="nav-link abc-dario" href="#">A</a>
+              <a class="nav-link abc-dario" href="#">B</a>
+              <a class="nav-link abc-dario" href="#">C</a>
+              <a class="nav-link abc-dario" href="#">D</a>
+              <a class="nav-link abc-dario" href="#">E</a>
+              <a class="nav-link abc-dario" href="#">F</a>
+              <a class="nav-link abc-dario" href="#">G</a>
+              <a class="nav-link abc-dario" href="#">H</a>
+              <a class="nav-link abc-dario" href="#">I</a>
+              <a class="nav-link abc-dario" href="#">J</a>
+              <a class="nav-link abc-dario" href="#">K</a>
+              <a class="nav-link abc-dario" href="#">L</a>
+              <a class="nav-link abc-dario" href="#">M</a>
+              <a class="nav-link abc-dario" href="#">N</a>
+              <a class="nav-link abc-dario" href="#">Ñ</a>
+              <a class="nav-link abc-dario" href="#">O</a>
+              <a class="nav-link abc-dario" href="#">P</a>
+              <a class="nav-link abc-dario" href="#">Q</a>
+              <a class="nav-link abc-dario" href="#">R</a>
+              <a class="nav-link abc-dario" href="#">S</a>
+              <a class="nav-link abc-dario" href="#">T</a>
+              <a class="nav-link abc-dario" href="#">U</a>
+              <a class="nav-link abc-dario" href="#">V</a>
+              <a class="nav-link abc-dario" href="#">W</a>
+              <a class="nav-link abc-dario" href="#">X</a>
+              <a class="nav-link abc-dario" href="#">Y</a>
+              <a class="nav-link abc-dario" href="#">Z</a>
+
+            </nav>
+          </div>
         </div>
         <!-- tabla -->
         <div class="row pt-5 pb-5">
@@ -163,12 +197,11 @@
             </div>
           </div>
         </div>
-        
     </div>
    
     <script src="resources/jquery/jquery-3.2.1.min.js"></script>
     <script src="resources/bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/paises_ciudades.js"></script>
-    <script src="js/enciclopedia.js"></script>
+    <script src="js/paises_ciudades.js?v=1"></script>
+    <script src="js/enciclopedia.js?v=1"></script>
 </body>
 </html>
